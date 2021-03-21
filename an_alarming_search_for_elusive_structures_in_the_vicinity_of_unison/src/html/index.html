@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    //= templates/head.html
+  </head>
+
+  <body>
+    <div class="popup-container desktop-popup">
+      <div class="popup">Sound on and show the scores in english</div>
+      <div class="popup">Включить звук и показать партитуру на русском</div>
+    </div>
+    <div class="popup-container mobile-popup">
+      <div>
+        The Orchestra's <i>live</i> performance is not available from mobile devices.<br /><br />
+        You can watch and listen to the <i>recording</i> of the performance, but it is better to open this page on your computer.
+      </div>
+      <br />
+      <div>
+        Выступление Оркестра в <i>прямом эфире</i> недоступно с мобильных устройств.<br /><br />
+        Вы можете посмотреть и послушать <i>запись</i> выступления, но лучше открыть эту страницу на компьютере.
+      </div>
+
+      <iframe
+        style="width: 100%; height: calc(100vw * 0.66); padding-bottom: 15px"
+        src="https://www.youtube.com/embed/0G6ivs7A2YY?modestbranding=1;rel=0;autohide=1;controls=1;' frameborder='0' allowfullscreen=''"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+      ></iframe>
+
+      <div style="text-align: center">
+        <a href="https://dfap.bandcamp.com/album/concerto-for-public-transport-orchestra-in-four-movements" target="_blank">bc</a> | <a href="https://soundcloud.com/max-alyokhin/sets/concerto-for-public-transport-orchestra-in-four-movements" target="_blank">sc</a> |
+        <a href="https://vk.com/music/playlist/39324177_85294052" target="_blank">vk</a> | <a href="https://yadi.sk/d/bw_vp5aDpfiitw" target="_blank">download</a>
+      </div>
+    </div>
+
+    <div class="partitura-container">
+      <div class="partitura"></div>
+    </div>
+
+    <div id="map"></div>
+  </body>
+</html>

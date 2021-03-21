@@ -1,0 +1,47 @@
+#map, #map-ru
+  height: 100%
+  margin-left: 50vw
+  z-index: 1
+  // @media screen and ( max-width: 1023px )
+  //   margin-left: 0
+
+.leaflet-pane
+  transition: none
+
+.marker
+  box-shadow: 0 0 rgba(0, 0, 0, .2)
+  animation: marker-animation 5s
+  border-radius: 50%
+  height: 6px !important
+  width: 6px !important
+  background-clip: padding-box
+
+.marker::after
+  border-radius: 40px
+  background-clip: padding-box
+  box-shadow: 0 0 rgba(0, 0, 0, .2)
+  background: #fff
+  border: 5px solid #000
+  content: ''
+  display: block
+  position: absolute
+  height: 6px
+  width: 6px
+
+.red
+  // opacity: 1 !important
+.red::after
+  animation: red-animation 24s
+
+@keyframes red-animation
+  0%
+    opacity: 0
+  10%
+    opacity: 1
+  20%
+    border: 5px solid #ff0000
+
+  80%
+    border: 5px solid #ff0000
+  100%
+    border: 5px solid #000000

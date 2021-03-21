@@ -1,0 +1,103 @@
+@import "fonts"
+@import "vars"
+@import "normalize"
+@import "mixins"
+@import "maps"
+
+::-webkit-scrollbar
+  width: 8px
+
+::-webkit-scrollbar-thumb
+  border-radius: 300px
+  background: rgba(131, 131, 131, 0.466)
+
+::-webkit-scrollbar-track
+  background: rgba(0, 0, 0, 0)
+
+body
+  font-family: roboto-mono-regular
+
+.popup-container
+  position: absolute
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+  width: 100%
+  height: 100%
+  z-index: 1000
+  left: 0
+  top: 0
+  background: rgb(255, 255, 255)
+  opacity: 0
+  transition: all ease 1s
+  .popup
+    padding: 25px
+    color: rgb(255, 255, 255)
+    text-align: center
+    display: flex
+    justify-content: space-around
+    align-items: center
+    transition: all ease 1s
+    margin: 25px
+    background: black
+    flex-direction: column
+    border-radius: 6px
+    width: 260px
+    &:hover
+      cursor: pointer
+
+.desktop-popup
+  // @media screen and ( max-width: 1023px )
+  display: none
+.mobile-popup
+  // display: none
+  display: block
+  padding: 15px
+  box-sizing: border-box
+  div
+    max-width: 800px
+    padding: 0 0 15px 0
+  // @media screen and ( max-width: 1023px )
+    // display: flex
+    // display: block
+
+.desktop
+  .desktop-popup
+    display: flex
+  .mobile-popup
+    display: none
+  .partitura-container
+    display: block
+
+.active
+  opacity: 1
+
+.partitura-container
+  position: absolute
+  width: 50vw
+  z-index: 999
+  left: 0
+  top: 0
+  background: rgba(22, 22, 22, 0.92)
+  line-height: 14px
+  transition: all ease 1s
+  // @media screen and ( max-width: 1023px )
+  display: none
+  .partitura
+    padding: 25px 25px 15px 25px
+    overflow-y: scroll
+    height: calc(100vh - 40px)
+    font-size: calc(0.6em + 0.1vw)
+    span
+      display: inline-block
+      padding-bottom: 10px
+      margin: 0
+      width: 100%
+    .partitura-default
+      color: rgb(224, 224, 224)
+    .partitura-message
+      color: #e5e503
+    .partitura-alert
+      color: #ff5c5c
+

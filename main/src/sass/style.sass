@@ -1,0 +1,99 @@
+@import "fonts"
+@import "vars"
+@import "normalize"
+@import "mixins"
+
+*,
+*::before,
+*::after
+  margin: 0
+  outline: none
+  box-sizing: border-box
+  transition: $transition-default
+
+html
+  width: 100%
+
+body
+  position: relative
+  max-width: 1440px
+  margin: 0 auto
+  font-family: $default-font
+  background: $white
+  color: $black
+  padding: $default-padding
+  opacity: 0
+  @media screen and ( $mobile )
+    padding: $mobile-padding
+
+a
+  text-decoration: underline
+  color: $black
+  font-weight: normal
+  transition: none
+  &:hover
+    font-weight: bold
+
+.header
+  position: fixed
+  top: 0
+  // left: 0
+  transition: $transition-logo
+  @media screen and ( $tablet )
+    width: 100%
+    height: 180px
+    background: $white
+    position: absolute
+  @media screen and ( $mobile )
+    // position: absolute
+  .logo
+    font-family: $logo-font
+    font-size: 28px
+    line-height: 90%
+    padding: 40px
+    padding-left: 0
+    @media screen and ( $mobile )
+      padding: 20px
+      padding-left: 0
+    a
+      text-decoration: none
+      font-weight: normal
+
+.container
+  display: flex
+  justify-content: flex-end
+  @media screen and ( $tablet )
+    justify-content: flex-start
+  .subcontainer
+    max-width: 760px
+    @media screen and ( $tablet )
+      padding-top: 200px
+    p
+      padding-bottom: 15px
+    .title
+      font-family: $title-font
+      font-size: 34px
+      line-height: 108%
+      padding-bottom: 15px
+    .subtitle
+      font-family: $subtitle-font
+      font-style: italic
+      font-size: 18px
+      line-height: 120%
+      padding-bottom: 40px
+    .text
+      font-size: 14px
+      line-height: 150%
+
+.ru, .en
+  display: none
+  opacity: 0
+
+.language
+  padding-bottom: 20px
+  span
+    cursor: pointer
+
+.active
+  text-decoration: underline
+  font-weight: bold
