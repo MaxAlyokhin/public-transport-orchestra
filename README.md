@@ -2,9 +2,7 @@
 
 Performed by the collective of drivers of the Krasnodar Tram and Trolleybus Department
 
-<p align="center">
-  <img src="https://orchestra.stranno.su/img/favicons/og.png" width="500">
-</p>
+![](https://orchestra.stranno.su/design.png)
 
 https://orchestra.stranno.su
 
