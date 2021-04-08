@@ -1,12 +1,14 @@
-# Concerto for public transport orchestra in four movements
+## Concerto for public transport orchestra in four movements
 
-## Performed by the collective of drivers of the Krasnodar Tram and Trolleybus Department
+Performed by the collective of drivers of the Krasnodar Tram and Trolleybus Department
 
-Stack: HTML5, Sass, JavaScript, Gulp, Web Audio API, Leaflet + OpenStreetMap + Stamen
-
-![](https://orchestra.stranno.su/img/favicons/og.png)
+<p align="center">
+  <img src="https://orchestra.stranno.su/img/favicons/og.png" width="500">
+</p>
 
 https://orchestra.stranno.su
+
+Stack: HTML5, Sass, JavaScript, Gulp, Web Audio API, Leaflet + OpenStreetMap + Stamen
 
 The algorithm regularly receives data about the movement of public transport from a server in Latvia, which provides this data to several transportation services in several cities in Russia and the Baltic States, and read the data into several arrays, which contain information about the speed, type of transport, route and coordinates. Then, based on this data, markers of moving vehicles are drawn on the map.
 
