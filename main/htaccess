@@ -1,0 +1,17 @@
+AddDefaultCharset UTF-8
+
+<IfModule mod_rewrite.c>
+RewriteEngine On
+
+#Редирект с www на non-www
+RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
+RewriteRule ^(.*)$ https://%1/$1 [R=301,L]
+
+#Редирект с http на https
+RewriteCond %{HTTPS} off
+RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI}  [QSA,L,R=301]
+
+#Редирект с full.html
+Redirect 301 /full.html https://orchestra.stranno.su
+
+</IfModule>
