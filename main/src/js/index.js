@@ -1,7 +1,11 @@
 window.addEventListener('load', () => {
-  // Settings
-  //  Чтобы поменять язык по-умолчанию, меняем на единицу
-  let languageMarker = 0 // 1 - en, 0 - ru
+  let languageMarker = null
+
+  if (navigator.language.slice(0, 2) == 'ru') {
+    languageMarker = 0
+  } else {
+    languageMarker = 1
+  }
 
   if (languageMarker) {
     document.querySelector('.en-button').classList.toggle('active')
