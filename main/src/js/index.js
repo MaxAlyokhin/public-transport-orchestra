@@ -1,10 +1,14 @@
 window.addEventListener('load', () => {
   let languageMarker = null
 
-  if (navigator.language.slice(0, 2) == 'ru') {
-    languageMarker = 0
+  const langMarkerFromURL = document.location.search.slice(1)
+
+  if (langMarkerFromURL === 'ru') {
+    languageMarker = false
+  } else if (langMarkerFromURL === 'en') {
+    languageMarker = true
   } else {
-    languageMarker = 1
+    languageMarker = 'ru' == navigator.language.slice(0, 2) ? false : true
   }
 
   if (languageMarker) {
