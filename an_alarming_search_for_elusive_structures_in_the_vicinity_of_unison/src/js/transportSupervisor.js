@@ -19,7 +19,8 @@ export function transportSupervisor() {
   let oneCallOfFunction = 0 // Маркер первого вызова функции
 
   async function getTransportData() {
-    let transportServerResponse = await fetch('https://www.stops.lt/krasnodar/gps.txt')
+    // let transportServerResponse = await fetch('https://www.stops.lt/krasnodar/gps.txt')
+    let transportServerResponse = await fetch('https://proxy.stranno.su/orchestra')
 
     if (transportServerResponse.ok) {
       // Если HTTP-статус в диапазоне 200-299

@@ -3,17 +3,23 @@ import { tones } from './tones.js' // Генерирует звукоряд
 import { partitura } from './partitura.js'
 
 // Settings
-export const updateFrequency = 3000 // Частота обновления данных о скоростях
+export const updateFrequency = 12000 // Частота обновления данных о скоростях
 const root = 146.8324 // Базовая частота, с которой начинаем считать звукоряд
 const octaveAmount = 8 // Количество октав
 const tonesInOctaveAmount = 24 // Количество тонов (нот) в октаве. Общее количество тонов должно быть больше 60 — чтобы каждому км/ч соответствовал свой тон
 export const toneDuration = 7.0 // Продолжительность тона в секундах
 
 function main() {
-  partitura([`Welcome to the performance of the Krasnodar Public Transport Orchestra.`, `Добро пожаловать на выступление Краснодарского Оркестра Общественного Транспорта.`])
+  partitura([
+    `Welcome to the performance of the Krasnodar Public Transport Orchestra.`,
+    `Добро пожаловать на выступление Краснодарского Оркестра Общественного Транспорта.`,
+  ])
 
   setTimeout(() => {
-    partitura([`The orchestra will play a microtonal composition in quarter tones.`, `Оркестр сыграет микротональную композицию на четвертитонах.`])
+    partitura([
+      `The orchestra will play a microtonal composition in quarter tones.`,
+      `Оркестр сыграет микротональную композицию на четвертитонах.`,
+    ])
   }, 4000)
   setTimeout(() => {
     partitura([`The performance is coming up soon.`, `Выступление скоро начнётся.`])

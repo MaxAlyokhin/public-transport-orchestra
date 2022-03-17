@@ -25,7 +25,8 @@ export function transportSupervisor(updateFrequency) {
 
   async function getTransportData() {
     // let transportServerResponse = await fetch('https://m.stops.lt/vilnius/gps.txt')
-    let transportServerResponse = await fetch('https://stops.lt/krasnodar/gps.txt')
+    // let transportServerResponse = await fetch('https://stops.lt/krasnodar/gps.txt')
+    let transportServerResponse = await fetch('https://proxy.stranno.su/orchestra')
 
     if (transportServerResponse.ok) {
       // Если HTTP-статус в диапазоне 200-299
@@ -67,8 +68,20 @@ export function transportSupervisor(updateFrequency) {
       if (!oneCallOfFunction) {
         partitura([`Getting vehicle data.`, `Получаем данные о транспорте.`])
       } else {
-        partitura([`Data updated. Number of moving cars is — ${speedsArray.length}`, `Данные обновлены. Количество движущихся машин — ${speedsArray.length}`], 'message')
-        partitura([`The average speed of traffic in the city — ${meanValue} km/h`, `Средняя скорость трафика в городе — ${meanValue} км/ч`], 'message')
+        partitura(
+          [
+            `Data updated. Number of moving cars is — ${speedsArray.length}`,
+            `Данные обновлены. Количество движущихся машин — ${speedsArray.length}`,
+          ],
+          'message'
+        )
+        partitura(
+          [
+            `The average speed of traffic in the city — ${meanValue} km/h`,
+            `Средняя скорость трафика в городе — ${meanValue} км/ч`,
+          ],
+          'message'
+        )
       }
 
       // Для подсчёта разницы средних скоростей поочерёдно запоминаем предыдущие значения
@@ -87,17 +100,41 @@ export function transportSupervisor(updateFrequency) {
       // В зависимости от разницы скоростей формируем диапазон возможных длительностей нот.
       // Вернее, частоту их генерации. Чем быстрее мы ускорились, тем короче диапазон, и дирижёр будет вынужден выбирать длительности в узком и очень коротком диапазоне (например от 0.1 до 0.2 секунды)
       if (meanValueDifference < 0) {
-        partitura([`Slowing down of traffic by ${meanValueDifference} km/h is observed`, `Наблюдается замедление движения трафика на ${meanValueDifference} км/ч`], 'alert')
+        partitura(
+          [
+            `Slowing down of traffic by ${meanValueDifference} km/h is observed`,
+            `Наблюдается замедление движения трафика на ${meanValueDifference} км/ч`,
+          ],
+          'alert'
+        )
         bandwidthOfGenerationFrequency = 2.2 + Math.abs(meanValueDifference) * 2
-        partitura([`A new range of tone durations has been defined: from ${bandwidthOfGenerationFrequency} to 0.1 s.`, `Определён новый диапазон длительностей тонов: от ${bandwidthOfGenerationFrequency} до 0.1 секунды`], 'message')
+        partitura(
+          [
+            `A new range of tone durations has been defined: from ${bandwidthOfGenerationFrequency} to 0.1 s.`,
+            `Определён новый диапазон длительностей тонов: от ${bandwidthOfGenerationFrequency} до 0.1 секунды`,
+          ],
+          'message'
+        )
       }
       if (meanValueDifference > 0) {
-        partitura([`An acceleration of traffic by ${meanValueDifference} km/h is observed`, `Наблюдается ускорение движения трафика на ${meanValueDifference} км/ч`], 'alert')
+        partitura(
+          [
+            `An acceleration of traffic by ${meanValueDifference} km/h is observed`,
+            `Наблюдается ускорение движения трафика на ${meanValueDifference} км/ч`,
+          ],
+          'alert'
+        )
         bandwidthOfGenerationFrequency = 2.2 - meanValueDifference * 2
         if (meanValueDifference > 1) {
           bandwidthOfGenerationFrequency = 0.2
         }
-        partitura([`A new range of tone durations has been defined: from ${bandwidthOfGenerationFrequency} to 0.1 s.`, `Определён новый диапазон длительностей тонов: от ${bandwidthOfGenerationFrequency} до 0.1 секунды`], 'message')
+        partitura(
+          [
+            `A new range of tone durations has been defined: from ${bandwidthOfGenerationFrequency} to 0.1 s.`,
+            `Определён новый диапазон длительностей тонов: от ${bandwidthOfGenerationFrequency} до 0.1 секунды`,
+          ],
+          'message'
+        )
       }
 
       // По первому приходу данных генерим карту
