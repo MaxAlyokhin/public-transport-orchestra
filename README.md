@@ -6,15 +6,21 @@ Performed by the collective of drivers of the Krasnodar Tram and Trolleybus Depa
 
 ![](https://orchestra.stranno.su/design.png)
 
-https://orchestra.stranno.su
+**See and listen here:** https://orchestra.stranno.su
 
-<div style="display: flex; justify-content: center; align-items:center;column-gap:20px">
+<div align="center">
   <img style="width:auto; height:50px" src="https://store.stranno.su/adaf.jpg"/>
 
-  <img style="width:auto; height:90px" src="https://store.stranno.su/kuryokhin.png"/>
+  <img style="width:auto; height:50px" src="https://store.stranno.su/kuryokhin.png"/>
 
   <img style="width:auto; height:50px" src="https://store.stranno.su/wrong.png"/>
 </div>
+
+The project is a laureate of the Kuryokhin Prize, participant of the international exhibitions, festivals and conferences. If you have any ideas for collaborations and contributions, or if you have any questions or suggestions, write me to <hello@stranno.su> or open an issue.
+
+Recordings of the performances can be seen on the playlist at <a target="_blank" rel="noopener noreferrer" href="https://youtube.com/playlist?list=PLMh6ltuZa_ijOfOARo7qutsKo4jk8HNTR">Youtube</a>, listen in <a target="_blank" rel="noopener noreferrer" href="https://dfap.bandcamp.com/album/concerto-for-public-transport-orchestra-in-four-movements">Bandcamp</a>, <a href="https://soundcloud.com/max-alyokhin/sets/concerto-for-public-transport-orchestra-in-four-movements" target="_blank" rel="noopener noreferrer">Soundcloud</a> and <a href="https://vk.com/music/playlist/39324177_85294052" target="_blank" rel="noopener noreferrer">vk</a>, or download from <a href="https://yadi.sk/d/bw_vp5aDpfiitw" target="_blank" rel="noopener noreferrer">cloud</a>. Also you can listen a performance with musicians <a target="_blank" rel="noopener noreferrer" href="https://youtu.be/Nrw7B2xRRjk">here</a>.
+
+### Technical description
 
 Stack: HTML5, Sass, JavaScript, Gulp, Web Audio API, Leaflet + OpenStreetMap + Stamen
 
