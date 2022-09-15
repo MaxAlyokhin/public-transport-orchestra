@@ -2,9 +2,19 @@
 
 Performed by the collective of drivers of the Krasnodar Tram and Trolleybus Department
 
+![Uptime Robot status](https://img.shields.io/uptimerobot/status/m792681767-fc530c259301128face06fc3) [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.6770197.svg)](https://doi.org/10.5281/zenodo.6770197)
+
 ![](https://orchestra.stranno.su/design.png)
 
 https://orchestra.stranno.su
+
+<div style="display: flex; justify-content: center; align-items:center;column-gap:20px">
+  <img style="width:auto; height:50px" src="https://store.stranno.su/adaf.jpg"/>
+
+  <img style="width:auto; height:90px" src="https://store.stranno.su/kuryokhin.png"/>
+
+  <img style="width:auto; height:50px" src="https://store.stranno.su/wrong.png"/>
+</div>
 
 Stack: HTML5, Sass, JavaScript, Gulp, Web Audio API, Leaflet + OpenStreetMap + Stamen
 
