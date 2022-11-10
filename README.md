@@ -2,7 +2,7 @@
 
 Performed by the collective of drivers of the Krasnodar Tram and Trolleybus Department
 
-[![Uptime Robot status](https://img.shields.io/uptimerobot/status/m792681767-fc530c259301128face06fc3)](https://orchestra.stranno.su) [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.6770197.svg)](https://doi.org/10.5281/zenodo.6770197)
+[![Uptime Robot status](https://img.shields.io/uptimerobot/status/m792681767-fc530c259301128face06fc3)](https://orchestra.stranno.su) [![Uptime Robot status](https://img.shields.io/uptimerobot/ratio/m792681767-fc530c259301128face06fc3)](https://orchestra.stranno.su) [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.6770197.svg)](https://doi.org/10.5281/zenodo.6770197)
 
 ![](https://orchestra.stranno.su/design.png)
 
