@@ -8,7 +8,10 @@ Performed by the collective of drivers of the Krasnodar Tram and Trolleybus Depa
 
 **See and listen here:** https://orchestra.stranno.su
 
-<img align="center" src="https://store.stranno.su/logos.png"/>
+<picture align="center">
+  <source media="(prefers-color-scheme: dark)" srcset="https://store.stranno.su/logos-dark.png">
+  <img src="https://store.stranno.su/logos.png">
+</picture>
 
 The project is a laureate of the Kuryokhin Prize, participant of the international exhibitions, festivals and conferences. If you have any ideas for collaborations and contributions, or if you have any questions or suggestions, write me to <hello@stranno.su> or open an issue.
 
